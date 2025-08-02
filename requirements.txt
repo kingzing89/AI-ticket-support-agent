@@ -1,0 +1,17 @@
+# Requirements for Support Ticket Agent
+# Core dependencies
+python-dotenv>=1.0.0
+
+# For text processing and regex
+regex>=2023.6.3
+
+# LangGraph and LangChain (will be needed for LLM integration)
+# langgraph>=0.0.55
+# langchain>=0.1.0
+# langchain-openai>=0.0.5
+
+# Development and testing
+pytest>=7.0.0
+
+# Logging
+structlog>=23.0.0

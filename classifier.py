@@ -7,7 +7,7 @@ import logging
 import re
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass
-from models import AgentState, TicketCategory
+from src.models import AgentState, TicketCategory
 
 logger = logging.getLogger(__name__)
 

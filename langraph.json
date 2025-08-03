@@ -1,0 +1,29 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+      "support_agent": {
+        "path": "src.graph:create_support_graph",
+        "config_schema": {
+          "type": "object",
+          "properties": {
+            "groq_api_key": {
+              "type": "string",
+              "description": "Groq API key for LLM calls"
+            },
+            "max_retries": {
+              "type": "integer",
+              "default": 2,
+              "description": "Maximum number of retry attempts"
+            },
+            "escalation_csv_path": {
+              "type": "string",
+              "default": "escalation_log.csv",
+              "description": "Path to escalation log CSV file"
+            }
+          },
+          "required": ["groq_api_key"]
+        }
+      }
+    },
+    "env": ".env"
+  }

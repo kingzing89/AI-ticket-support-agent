@@ -7,7 +7,8 @@ import logging
 import re
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass
-from src.models import AgentState, TicketCategory
+from src.state import SupportTicketState
+from src.models import TicketCategory 
 
 logger = logging.getLogger(__name__)
 
@@ -218,7 +219,7 @@ class TicketClassifier:
         )
 
 
-def classify_ticket_node(state: AgentState) -> AgentState:
+def classify_ticket_node(state: SupportTicketState) -> SupportTicketState:
     """
     LangGraph node function for ticket classification.
     This is the first processing node after input handling.
@@ -281,13 +282,13 @@ def classify_ticket_node(state: AgentState) -> AgentState:
     return state
 
 
-def get_classification_confidence(state: AgentState) -> float:
+def get_classification_confidence(state: SupportTicketState) -> float:
     """Helper function to get classification confidence from state"""
     metadata = state.get("classification_metadata", {})
     return metadata.get("confidence", 0.0)
 
 
-def is_classification_reliable(state: AgentState, threshold: float = 0.6) -> bool:
+def is_classification_reliable(state: SupportTicketState, threshold: float = 0.6) -> bool:
     """Helper function to check if classification is reliable enough"""
     confidence = get_classification_confidence(state)
     fallback_used = state.get("classification_metadata", {}).get("fallback_used", False)

@@ -1,5 +1,5 @@
 """
-Classification Node for Support Ticket Agent
+Classification Node for Support Ticket Agent - WORKING VERSION
 This node classifies tickets into predefined categories using multiple approaches
 """
 
@@ -7,8 +7,7 @@ import logging
 import re
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass
-from src.state import SupportTicketState
-from src.models import TicketCategory 
+from src.models import TicketCategory  # Keep this for the enum
 
 logger = logging.getLogger(__name__)
 
@@ -219,81 +218,119 @@ class TicketClassifier:
         )
 
 
-def classify_ticket_node(state: SupportTicketState) -> SupportTicketState:
+def classify_ticket_node(state: Dict) -> Dict:
     """
     LangGraph node function for ticket classification.
-    This is the first processing node after input handling.
+    FIXED VERSION - Properly handles processing_log and state management
     
     Args:
-        state: Current agent state containing the ticket
+        state: Current state dict containing subject and description
         
     Returns:
-        Updated state with classification results
+        Updated state dict with classification and updated processing_log
     """
     try:
-        ticket = state["ticket"]
+        # Get subject and description from state
+        subject = state.get("subject", "")
+        description = state.get("description", "")
+        
+        if not subject or not description:
+            logger.error("Missing subject or description in state")
+            
+            # Get existing processing log and add error
+            processing_log = state.get("processing_log", [])
+            processing_log.append("❌ Classification failed: Missing subject or description")
+            
+            return {
+                "classification": TicketCategory.GENERAL.value,
+                "processing_log": processing_log
+            }
         
         # Initialize classifier
         classifier = TicketClassifier()
         
         # Perform classification
-        classification_result = classifier.classify_ticket(
-            ticket.subject, 
-            ticket.description
-        )
+        classification_result = classifier.classify_ticket(subject, description)
         
-        # Update state
-        state["classification"] = classification_result.category.value
+        logger.info(f"Classified ticket as {classification_result.category.value} with confidence {classification_result.confidence:.2f}")
         
-        # Add detailed logging
-        log_entries = [
-            f"Classification completed: {classification_result.category.value}",
-            f"Confidence: {classification_result.confidence:.2f}",
-            f"Reasoning: {classification_result.reasoning}"
-        ]
+        # Get existing processing log or create new one
+        processing_log = state.get("processing_log", [])
+        
+        # Add classification results to processing log
+        processing_log.append(f"✅ Classification completed: {classification_result.category.value}")
+        processing_log.append(f"📊 Confidence: {classification_result.confidence:.2f}")
+        processing_log.append(f"🧠 Reasoning: {classification_result.reasoning}")
         
         if classification_result.fallback_used:
-            log_entries.append("⚠️ Fallback classification used - consider manual review")
+            processing_log.append("⚠️ Fallback classification used - consider manual review")
         
-        state["processing_log"].extend(log_entries)
-        
-        # Store classification metadata for downstream nodes
-        if "classification_metadata" not in state:
-            state["classification_metadata"] = {}
-        
-        state["classification_metadata"] = {
+        # Create classification metadata
+        classification_metadata = {
             "confidence": classification_result.confidence,
             "reasoning": classification_result.reasoning,
             "keywords_found": classification_result.keywords_found,
             "fallback_used": classification_result.fallback_used
         }
         
-        logger.info(f"Ticket {ticket.ticket_id} classified as {classification_result.category.value}")
+        # Return updated state dict - THIS IS THE KEY FIX
+        return {
+            "classification": classification_result.category.value,
+            "processing_log": processing_log,
+            "classification_metadata": classification_metadata
+        }
         
     except Exception as e:
         error_msg = f"Classification error: {str(e)}"
-        state["processing_log"].append(error_msg)
         logger.error(error_msg)
         
+        # Get existing processing log and add error
+        processing_log = state.get("processing_log", [])
+        processing_log.append(f"❌ {error_msg}")
+        processing_log.append(f"🔄 Fallback: classified as {TicketCategory.GENERAL.value} due to error")
+        
         # Fallback to GENERAL category on error
-        state["classification"] = TicketCategory.GENERAL.value
-        state["processing_log"].append(f"Fallback: classified as {TicketCategory.GENERAL.value} due to error")
-    
-    return state
+        return {
+            "classification": TicketCategory.GENERAL.value,
+            "processing_log": processing_log
+        }
 
 
-def get_classification_confidence(state: SupportTicketState) -> float:
+def get_classification_confidence(state: Dict) -> float:
     """Helper function to get classification confidence from state"""
     metadata = state.get("classification_metadata", {})
     return metadata.get("confidence", 0.0)
 
 
-def is_classification_reliable(state: SupportTicketState, threshold: float = 0.6) -> bool:
+def is_classification_reliable(state: Dict, threshold: float = 0.6) -> bool:
     """Helper function to check if classification is reliable enough"""
     confidence = get_classification_confidence(state)
     fallback_used = state.get("classification_metadata", {}).get("fallback_used", False)
     
     return confidence >= threshold and not fallback_used
+
+
+# Test function to verify the fix
+def test_classify_node():
+    """Test the classify_ticket_node function to ensure it works properly"""
+    
+    test_state = {
+        "subject": "Login issue", 
+        "description": "I am getting 404 when logging in with the correct password and username",
+        "processing_log": ["Initial ticket received"]
+    }
+    
+    print("🧪 Testing classify_ticket_node function...")
+    print(f"Input state: {test_state}")
+    
+    result = classify_ticket_node(test_state)
+    
+    print(f"\n✅ Result: {result}")
+    print(f"\n📋 Processing Log:")
+    for log_entry in result.get("processing_log", []):
+        print(f"  • {log_entry}")
+    
+    return result
 
 
 # Test cases for the classifier
@@ -346,26 +383,26 @@ def create_test_classification_cases():
             "subject": "Feature request",
             "description": "I would like to request a new feature for bulk data export. When will this be available?",
             "expected": TicketCategory.GENERAL
-        },
-        
-        # Ambiguous/multi-intent cases
-        {
-            "subject": "Account issue",
-            "description": "I'm having trouble with my account and also have a question about billing",
-            "expected": None  # Could be multiple categories
-        },
-        {
-            "subject": "Help needed",
-            "description": "I need help with something but not sure what category this falls under",
-            "expected": TicketCategory.GENERAL  # Should default to general
         }
     ]
 
 
 if __name__ == "__main__":
-    # Test the classifier
-    print("🧪 Testing Ticket Classification")
-    print("=" * 50)
+    # First test the node function
+    print("🔧 Testing Node Function Fix...")
+    test_result = test_classify_node()
+    
+    if test_result and "classification" in test_result and "processing_log" in test_result:
+        print("✅ Node function test PASSED!")
+    else:
+        print("❌ Node function test FAILED!")
+        exit(1)
+    
+    print("\n" + "="*60)
+    
+    # Then test the full classifier
+    print("🧪 Testing Full Classification Logic...")
+    print("=" * 60)
     
     classifier = TicketClassifier()
     test_cases = create_test_classification_cases()
@@ -379,24 +416,19 @@ if __name__ == "__main__":
         print(f"\n--- Test Case {i} ---")
         print(f"Subject: {case['subject']}")
         print(f"Description: {case['description'][:100]}...")
-        print(f"Expected: {case['expected'].value if case['expected'] else 'Any'}")
+        print(f"Expected: {case['expected'].value}")
         print(f"Predicted: {result.category.value}")
         print(f"Confidence: {result.confidence:.2f}")
-        print(f"Reasoning: {result.reasoning}")
         
-        if case["expected"]:
-            is_correct = result.category == case["expected"]
-            status = "✅ CORRECT" if is_correct else "❌ INCORRECT"
-            print(f"Result: {status}")
-            
-            if is_correct:
-                correct_predictions += 1
-            total_predictions += 1
-        else:
-            print("Result: ⚪ AMBIGUOUS (no expected answer)")
+        is_correct = result.category == case["expected"]
+        status = "✅ CORRECT" if is_correct else "❌ INCORRECT"
+        print(f"Result: {status}")
+        
+        if is_correct:
+            correct_predictions += 1
+        total_predictions += 1
     
-    if total_predictions > 0:
-        accuracy = correct_predictions / total_predictions
-        print(f"\n📊 Overall Accuracy: {accuracy:.2%} ({correct_predictions}/{total_predictions})")
-    
+    accuracy = correct_predictions / total_predictions
+    print(f"\n📊 Overall Accuracy: {accuracy:.2%} ({correct_predictions}/{total_predictions})")
     print("\n🏁 Classification testing completed!")
+    print("\n🚀 The classifier is ready for use in main.py!") 

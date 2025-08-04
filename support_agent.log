@@ -1,0 +1,35 @@
+2025-08-03 16:50:24,637 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-03 16:50:24,640 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-03 16:50:24,654 - src.graph - INFO - Graph compiled successfully
+2025-08-03 16:51:08,769 - __main__ - INFO - Starting workflow for ticket: Login issue
+2025-08-03 16:51:08,824 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:55:08,219 - __main__ - INFO - Starting workflow for ticket: billing issue
+2025-08-03 16:55:08,269 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:57:46,899 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-03 16:57:46,946 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:57:50,467 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-03 16:57:50,479 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:57:51,614 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-03 16:57:51,616 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:57:52,667 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-03 16:57:52,671 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:57:53,528 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-03 16:57:53,545 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:57:54,434 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-03 16:57:54,437 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 16:57:55,410 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-03 16:57:55,412 - __main__ - ERROR - Workflow failed: 'processing_log'
+2025-08-03 17:04:00,224 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-03 17:04:00,226 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-03 17:04:00,238 - src.graph - INFO - Graph compiled successfully
+2025-08-03 17:04:40,904 - __main__ - INFO - Starting workflow for ticket: billing problem
+2025-08-03 17:04:40,941 - classifier - INFO - Classified ticket as billing with confidence 0.85
+2025-08-03 17:04:40,941 - classifier - INFO - Classified ticket as billing with confidence 0.85
+2025-08-03 17:04:40,942 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: None
+2025-08-03 17:04:40,943 - src.rag_retrieval - INFO - Retrieved 4 documents for billing
+2025-08-03 17:04:40,943 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-03 17:04:40,944 - src.draft - INFO - Generating draft for billing ticket, attempt None
+2025-08-03 17:04:41,927 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-03 17:04:41,928 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-03 17:04:42,845 - src.review - INFO - Review completed: APPROVED
+2025-08-03 17:04:42,845 - src.graph - INFO - Checking attempts: 1, review_passed: True

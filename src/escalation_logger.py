@@ -10,7 +10,7 @@ class EscalationLogger:
         self._ensure_csv_exists()
     
     def _ensure_csv_exists(self):
-        """Create CSV file with headers if it doesn't exist"""
+        
         if not os.path.exists(self.csv_file):
             with open(self.csv_file, 'w', newline='', encoding='utf-8') as file:
                 writer = csv.writer(file)

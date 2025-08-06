@@ -33,3 +33,731 @@
 2025-08-03 17:04:41,928 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
 2025-08-03 17:04:42,845 - src.review - INFO - Review completed: APPROVED
 2025-08-03 17:04:42,845 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-05 01:42:43,496 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-05 01:42:43,498 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-05 01:42:43,510 - src.graph - INFO - Graph compiled successfully
+2025-08-06 01:42:31,369 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 01:42:31,371 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 01:42:31,383 - src.graph - INFO - Graph compiled successfully
+2025-08-06 01:43:19,298 - __main__ - INFO - Starting workflow for ticket: Payment method could not go through
+2025-08-06 01:43:19,369 - classifier - INFO - Classified ticket as billing with confidence 1.00
+2025-08-06 01:43:19,370 - classifier - INFO - Classified ticket as billing with confidence 1.00
+2025-08-06 01:43:19,370 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: None
+2025-08-06 01:43:19,371 - src.rag_retrieval - INFO - Retrieved 4 documents for billing
+2025-08-06 01:43:19,372 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 01:43:19,373 - src.draft - INFO - Generating draft for billing ticket, attempt None
+2025-08-06 01:43:20,982 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 01:43:20,983 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 01:43:21,813 - src.review - INFO - Review completed: APPROVED
+2025-08-06 01:43:21,814 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 01:45:35,778 - __main__ - INFO - Starting workflow for ticket: website issue
+2025-08-06 01:45:35,781 - classifier - INFO - Classified ticket as technical with confidence 1.00
+2025-08-06 01:45:35,782 - classifier - INFO - Classified ticket as technical with confidence 1.00
+2025-08-06 01:45:35,783 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: None
+2025-08-06 01:45:35,783 - src.rag_retrieval - INFO - Retrieved 4 documents for technical
+2025-08-06 01:45:35,783 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 01:45:35,784 - src.draft - INFO - Generating draft for technical ticket, attempt None
+2025-08-06 01:45:37,302 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 01:45:37,304 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 01:45:38,528 - src.review - INFO - Review completed: APPROVED
+2025-08-06 01:45:38,529 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 02:23:39,345 - __main__ - INFO - Starting workflow for ticket: Cannot login to my account
+2025-08-06 02:23:39,399 - classifier - INFO - Classified ticket as security with confidence 0.79
+2025-08-06 02:23:39,400 - classifier - INFO - Classified ticket as security with confidence 0.79
+2025-08-06 02:23:39,401 - src.rag_retrieval - INFO - Retrieving context for category: security, attempt: None
+2025-08-06 02:23:39,402 - src.rag_retrieval - INFO - Retrieved 4 documents for security
+2025-08-06 02:23:39,402 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 02:23:39,403 - src.draft - INFO - Generating draft for security ticket, attempt None
+2025-08-06 02:23:40,640 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 02:23:40,641 - src.review - INFO - Reviewing draft for security ticket, attempt 1
+2025-08-06 02:23:41,640 - src.review - INFO - Review completed: APPROVED
+2025-08-06 02:23:41,642 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 02:25:34,375 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 02:25:34,377 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 02:25:34,396 - src.graph - INFO - Graph compiled successfully
+2025-08-06 14:17:14,640 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 14:17:14,642 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 14:17:14,652 - src.graph - INFO - Graph compiled successfully
+2025-08-06 14:18:02,461 - __main__ - INFO - Starting workflow for ticket: I want my money back NOW
+2025-08-06 14:18:02,598 - classifier - INFO - Classified ticket as billing with confidence 1.00
+2025-08-06 14:18:02,599 - classifier - INFO - Classified ticket as billing with confidence 1.00
+2025-08-06 14:18:02,600 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: None
+2025-08-06 14:18:02,601 - src.rag_retrieval - INFO - Retrieved 4 documents for billing
+2025-08-06 14:18:02,602 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 14:18:02,603 - src.draft - INFO - Generating draft for billing ticket, attempt None
+2025-08-06 14:18:06,796 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 14:18:06,798 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 14:18:08,096 - src.review - INFO - Review completed: APPROVED
+2025-08-06 14:18:08,097 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 14:19:05,439 - __main__ - INFO - Starting workflow for ticket: Everything is broken
+2025-08-06 14:19:05,453 - classifier - INFO - Classified ticket as technical with confidence 0.87
+2025-08-06 14:19:05,453 - classifier - INFO - Classified ticket as technical with confidence 0.87
+2025-08-06 14:19:05,455 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: None
+2025-08-06 14:19:05,455 - src.rag_retrieval - INFO - Retrieved 4 documents for technical
+2025-08-06 14:19:05,456 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 14:19:05,457 - src.draft - INFO - Generating draft for technical ticket, attempt None
+2025-08-06 14:19:07,412 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 14:19:07,413 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 14:19:10,174 - src.review - INFO - Review completed: APPROVED
+2025-08-06 14:19:10,175 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 14:21:01,709 - __main__ - INFO - Starting workflow for ticket: Refund my free trial charges
+2025-08-06 14:21:01,712 - classifier - INFO - Classified ticket as billing with confidence 0.63
+2025-08-06 14:21:01,712 - classifier - INFO - Classified ticket as billing with confidence 0.63
+2025-08-06 14:21:01,714 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: None
+2025-08-06 14:21:01,714 - src.rag_retrieval - INFO - Retrieved 4 documents for billing
+2025-08-06 14:21:01,714 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 14:21:01,715 - src.draft - INFO - Generating draft for billing ticket, attempt None
+2025-08-06 14:21:02,462 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 14:21:02,463 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 14:21:05,427 - src.review - INFO - Review completed: APPROVED
+2025-08-06 14:21:05,428 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 14:26:26,819 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 14:26:27,948 - src.review - INFO - Review completed: REJECTED
+2025-08-06 14:28:26,495 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 14:28:26,497 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 14:28:26,512 - src.graph - INFO - Graph compiled successfully
+2025-08-06 14:28:34,581 - __main__ - INFO - Starting workflow for ticket: Test
+2025-08-06 14:28:34,620 - classifier - INFO - Classified ticket as general with confidence 0.30
+2025-08-06 14:28:34,621 - classifier - INFO - Classified ticket as general with confidence 0.30
+2025-08-06 14:28:34,622 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: None
+2025-08-06 14:28:34,623 - src.rag_retrieval - INFO - Retrieved 4 documents for general
+2025-08-06 14:28:34,623 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 14:28:34,627 - src.draft - INFO - Generating draft for general ticket, attempt None
+2025-08-06 14:28:35,520 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 14:28:35,522 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 14:28:36,428 - src.review - INFO - Review completed: APPROVED
+2025-08-06 14:28:36,429 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 18:03:01,657 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 18:03:01,659 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 18:03:01,680 - src.graph - INFO - Graph compiled successfully
+2025-08-06 18:03:18,366 - __main__ - INFO - Starting workflow for ticket: help me
+2025-08-06 18:03:18,401 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:03:18,401 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:03:18,402 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: None
+2025-08-06 18:03:18,403 - src.rag_retrieval - INFO - Retrieved 4 documents for technical
+2025-08-06 18:03:18,404 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 18:03:18,405 - src.draft - INFO - Generating draft for technical ticket, attempt None
+2025-08-06 18:03:27,492 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:03:27,494 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 18:03:28,360 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:03:28,361 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 18:03:28,361 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:03:28,362 - __main__ - ERROR - Workflow failed: unsupported operand type(s) for +: 'NoneType' and 'int'
+2025-08-06 18:14:18,336 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 18:14:18,337 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 18:14:18,346 - src.graph - INFO - Graph compiled successfully
+2025-08-06 18:14:27,429 - __main__ - INFO - Starting workflow for ticket: having issue help
+2025-08-06 18:14:27,463 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:14:27,463 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:14:27,465 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: None
+2025-08-06 18:14:27,466 - src.rag_retrieval - INFO - Retrieved 4 documents for technical
+2025-08-06 18:14:27,466 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 18:14:27,467 - src.draft - INFO - Generating draft for technical ticket, attempt None
+2025-08-06 18:14:28,858 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:14:28,859 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 18:14:29,762 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:14:29,763 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 18:14:29,763 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:14:29,764 - __main__ - ERROR - Workflow failed: unsupported operand type(s) for +: 'NoneType' and 'int'
+2025-08-06 18:18:33,781 - __main__ - INFO - Starting workflow for ticket: having issue
+2025-08-06 18:18:33,783 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:18:33,783 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:18:33,784 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: None
+2025-08-06 18:18:33,784 - src.rag_retrieval - INFO - Retrieved 4 documents for technical
+2025-08-06 18:18:33,785 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 18:18:33,786 - src.draft - INFO - Generating draft for technical ticket, attempt None
+2025-08-06 18:18:34,841 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:18:34,842 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 18:18:36,690 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:18:36,690 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 18:18:36,691 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:18:36,691 - __main__ - ERROR - Workflow failed: unsupported operand type(s) for +: 'NoneType' and 'int'
+2025-08-06 18:23:19,904 - __main__ - INFO - Starting workflow for ticket: payment issue
+2025-08-06 18:23:19,906 - classifier - INFO - Classified ticket as billing with confidence 0.75
+2025-08-06 18:23:19,906 - classifier - INFO - Classified ticket as billing with confidence 0.75
+2025-08-06 18:23:19,907 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: None
+2025-08-06 18:23:19,907 - src.rag_retrieval - INFO - Retrieved 4 documents for billing
+2025-08-06 18:23:19,907 - src.graph - INFO - RAG retrieval completed, attempt None
+2025-08-06 18:23:19,908 - src.draft - INFO - Generating draft for billing ticket, attempt None
+2025-08-06 18:23:20,708 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:23:20,710 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 18:23:22,019 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:23:22,021 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 18:23:22,021 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:23:22,022 - __main__ - ERROR - Workflow failed: unsupported operand type(s) for +: 'NoneType' and 'int'
+2025-08-06 18:27:18,482 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 18:27:18,484 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 18:27:18,492 - src.graph - INFO - Graph compiled successfully
+2025-08-06 18:27:26,485 - __main__ - INFO - Starting workflow for ticket: help
+2025-08-06 18:27:26,508 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:27:26,508 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:27:26,510 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 1
+2025-08-06 18:27:26,510 - src.rag_retrieval - INFO - Retrieved 2 documents for technical
+2025-08-06 18:27:26,510 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 18:27:26,511 - src.draft - INFO - Generating draft for technical ticket, attempt 1
+2025-08-06 18:27:27,139 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:27:27,141 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 18:27:27,898 - src.review - INFO - Review completed: APPROVED
+2025-08-06 18:27:27,899 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 18:29:25,802 - __main__ - INFO - Starting workflow for ticket: help
+2025-08-06 18:29:25,804 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 18:29:25,805 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 18:29:25,806 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 18:29:25,806 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 18:29:25,807 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 18:29:25,808 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 18:29:26,502 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:29:26,504 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 18:29:27,336 - src.review - INFO - Review completed: APPROVED
+2025-08-06 18:29:27,337 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 18:35:28,304 - __main__ - ERROR - Application failed to start: 
+2025-08-06 18:35:34,331 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 18:35:34,333 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 18:35:34,346 - src.graph - INFO - Graph compiled successfully
+2025-08-06 18:35:46,049 - __main__ - INFO - Starting workflow for ticket: I want to test
+2025-08-06 18:35:46,088 - classifier - INFO - Classified ticket as general with confidence 0.30
+2025-08-06 18:35:46,089 - classifier - INFO - Classified ticket as general with confidence 0.30
+2025-08-06 18:35:46,090 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 18:35:46,091 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 18:35:46,091 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 18:35:46,092 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 18:35:47,616 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:35:47,617 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 18:35:48,566 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:35:48,567 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 18:35:48,568 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:35:48,568 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 18:35:48,569 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 18:35:48,569 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 18:35:48,570 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 18:35:48,570 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 18:35:49,426 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:35:49,427 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 18:35:50,233 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:35:50,234 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 18:35:50,235 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:35:50,236 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 18:35:50,237 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 3
+2025-08-06 18:35:50,237 - src.rag_retrieval - INFO - Retrieved 4 documents for general
+2025-08-06 18:35:50,238 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 18:35:50,238 - src.draft - INFO - Generating draft for general ticket, attempt 3
+2025-08-06 18:35:51,094 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:35:51,095 - src.review - INFO - Reviewing draft for general ticket, attempt 3
+2025-08-06 18:35:51,969 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:35:51,970 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 18:35:51,971 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 18:35:51,971 - src.graph - INFO - Escalating ticket after max attempts reached
+2025-08-06 18:56:24,827 - __main__ - INFO - Starting workflow for ticket: I want to test
+2025-08-06 18:56:24,923 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:56:24,923 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:56:24,926 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 1
+2025-08-06 18:56:24,927 - src.rag_retrieval - INFO - Retrieved 2 documents for technical
+2025-08-06 18:56:24,927 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 18:56:24,928 - src.draft - INFO - Generating draft for technical ticket, attempt 1
+2025-08-06 18:56:25,800 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:56:25,802 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 18:56:26,712 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:56:26,715 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 18:56:26,715 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:56:26,717 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 18:56:26,718 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 2
+2025-08-06 18:56:26,718 - src.rag_retrieval - INFO - Retrieved 3 documents for technical
+2025-08-06 18:56:26,719 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 18:56:26,720 - src.draft - INFO - Generating draft for technical ticket, attempt 2
+2025-08-06 18:56:27,620 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:56:27,621 - src.review - INFO - Reviewing draft for technical ticket, attempt 2
+2025-08-06 18:56:28,616 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:56:28,617 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 18:56:28,618 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:56:28,619 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 18:56:28,619 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 3
+2025-08-06 18:56:28,620 - src.rag_retrieval - INFO - Retrieved 4 documents for technical
+2025-08-06 18:56:28,621 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 18:56:28,622 - src.draft - INFO - Generating draft for technical ticket, attempt 3
+2025-08-06 18:56:30,047 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:56:30,049 - src.review - INFO - Reviewing draft for technical ticket, attempt 3
+2025-08-06 18:56:31,046 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:56:31,046 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 18:56:31,047 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 18:56:31,047 - src.graph - INFO - Escalating ticket after max attempts reached
+2025-08-06 18:58:18,483 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 18:58:18,484 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 18:58:18,499 - src.graph - INFO - Graph compiled successfully
+2025-08-06 18:58:28,439 - __main__ - INFO - Starting workflow for ticket: i need help
+2025-08-06 18:58:28,467 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:58:28,467 - classifier - INFO - Classified ticket as technical with confidence 0.50
+2025-08-06 18:58:28,469 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 1
+2025-08-06 18:58:28,469 - src.rag_retrieval - INFO - Retrieved 2 documents for technical
+2025-08-06 18:58:28,470 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 18:58:28,471 - src.draft - INFO - Generating draft for technical ticket, attempt 1
+2025-08-06 18:58:29,581 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:58:29,583 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 18:58:30,584 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:58:30,585 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 18:58:30,586 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:58:30,588 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 18:58:30,588 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 2
+2025-08-06 18:58:30,589 - src.rag_retrieval - INFO - Retrieved 3 documents for technical
+2025-08-06 18:58:30,590 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 18:58:30,591 - src.draft - INFO - Generating draft for technical ticket, attempt 2
+2025-08-06 18:58:31,491 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:58:31,492 - src.review - INFO - Reviewing draft for technical ticket, attempt 2
+2025-08-06 18:58:32,711 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:58:32,712 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 18:58:32,713 - src.graph - INFO - Retrying after failed review
+2025-08-06 18:58:32,714 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 18:58:32,714 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 3
+2025-08-06 18:58:32,714 - src.rag_retrieval - INFO - Retrieved 4 documents for technical
+2025-08-06 18:58:32,715 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 18:58:32,715 - src.draft - INFO - Generating draft for technical ticket, attempt 3
+2025-08-06 18:58:33,866 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 18:58:33,868 - src.review - INFO - Reviewing draft for technical ticket, attempt 3
+2025-08-06 18:58:34,897 - src.review - INFO - Review completed: REJECTED
+2025-08-06 18:58:34,898 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 18:58:34,899 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 18:58:34,900 - src.escalation_logger - INFO - Escalating ticket after max attempts reached
+2025-08-06 19:02:32,921 - __main__ - INFO - Starting workflow for ticket: billing issue
+2025-08-06 19:02:32,979 - classifier - INFO - Classified ticket as billing with confidence 0.89
+2025-08-06 19:02:32,980 - classifier - INFO - Classified ticket as billing with confidence 0.89
+2025-08-06 19:02:32,981 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 1
+2025-08-06 19:02:32,982 - src.rag_retrieval - INFO - Retrieved 2 documents for billing
+2025-08-06 19:02:32,982 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:02:32,982 - src.draft - INFO - Generating draft for billing ticket, attempt 1
+2025-08-06 19:02:34,211 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:02:34,213 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 19:02:36,052 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:02:36,053 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:02:36,053 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:02:36,054 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:02:36,055 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 2
+2025-08-06 19:02:36,056 - src.rag_retrieval - INFO - Retrieved 3 documents for billing
+2025-08-06 19:02:36,056 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:02:36,057 - src.draft - INFO - Generating draft for billing ticket, attempt 2
+2025-08-06 19:02:36,965 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:02:36,967 - src.review - INFO - Reviewing draft for billing ticket, attempt 2
+2025-08-06 19:02:37,906 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:02:37,906 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 19:02:37,906 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:02:37,907 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 19:02:37,908 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 3
+2025-08-06 19:02:37,908 - src.rag_retrieval - INFO - Retrieved 4 documents for billing
+2025-08-06 19:02:37,909 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 19:02:37,909 - src.draft - INFO - Generating draft for billing ticket, attempt 3
+2025-08-06 19:02:39,618 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:02:39,619 - src.review - INFO - Reviewing draft for billing ticket, attempt 3
+2025-08-06 19:02:40,495 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:02:40,496 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 19:02:40,496 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 19:02:40,497 - src.escalation_logger - INFO - Escalating ticket after max attempts reached
+2025-08-06 19:04:12,400 - __main__ - INFO - Starting workflow for ticket: payment issue
+2025-08-06 19:04:12,425 - classifier - INFO - Classified ticket as billing with confidence 0.85
+2025-08-06 19:04:12,427 - classifier - INFO - Classified ticket as billing with confidence 0.85
+2025-08-06 19:04:12,428 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 1
+2025-08-06 19:04:12,429 - src.rag_retrieval - INFO - Retrieved 2 documents for billing
+2025-08-06 19:04:12,429 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:04:12,430 - src.draft - INFO - Generating draft for billing ticket, attempt 1
+2025-08-06 19:04:16,090 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:04:16,092 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 19:04:17,342 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:04:17,343 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:04:17,343 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:04:17,344 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:04:17,344 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 2
+2025-08-06 19:04:17,345 - src.rag_retrieval - INFO - Retrieved 3 documents for billing
+2025-08-06 19:04:17,345 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:04:17,346 - src.draft - INFO - Generating draft for billing ticket, attempt 2
+2025-08-06 19:04:18,286 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:04:18,288 - src.review - INFO - Reviewing draft for billing ticket, attempt 2
+2025-08-06 19:04:19,352 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:04:19,353 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 19:04:19,353 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:04:19,354 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 19:04:19,354 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 3
+2025-08-06 19:04:19,355 - src.rag_retrieval - INFO - Retrieved 4 documents for billing
+2025-08-06 19:04:19,355 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 19:04:19,356 - src.draft - INFO - Generating draft for billing ticket, attempt 3
+2025-08-06 19:04:20,236 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:04:20,237 - src.review - INFO - Reviewing draft for billing ticket, attempt 3
+2025-08-06 19:04:21,200 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:04:21,200 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 19:04:21,201 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 19:04:21,202 - src.escalation_logger - INFO - Escalating ticket after max attempts reached
+2025-08-06 19:05:07,636 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 19:05:07,637 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 19:05:07,650 - src.graph - INFO - Graph compiled successfully
+2025-08-06 19:05:54,346 - __main__ - INFO - Starting workflow for ticket: Billing issue
+2025-08-06 19:05:54,373 - classifier - INFO - Classified ticket as billing with confidence 0.82
+2025-08-06 19:05:54,374 - classifier - INFO - Classified ticket as billing with confidence 0.82
+2025-08-06 19:05:54,375 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 1
+2025-08-06 19:05:54,376 - src.rag_retrieval - INFO - Retrieved 2 documents for billing
+2025-08-06 19:05:54,376 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:05:54,377 - src.draft - INFO - Generating draft for billing ticket, attempt 1
+2025-08-06 19:05:55,333 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:05:55,333 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 19:05:56,141 - src.review - INFO - Review completed: APPROVED
+2025-08-06 19:05:56,141 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 19:06:32,130 - __main__ - INFO - Starting workflow for ticket: testing
+2025-08-06 19:06:32,132 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:06:32,133 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:06:32,134 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 19:06:32,134 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 19:06:32,134 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:06:32,135 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 19:06:33,346 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:06:33,348 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 19:06:34,620 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:06:34,621 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:06:34,621 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:06:34,622 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:06:34,622 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 19:06:34,623 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 19:06:34,624 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:06:34,625 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 19:06:36,044 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:06:36,045 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 19:06:37,641 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:06:37,642 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 19:06:37,642 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:06:37,643 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 19:06:37,643 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 3
+2025-08-06 19:06:37,643 - src.rag_retrieval - INFO - Retrieved 4 documents for general
+2025-08-06 19:06:37,644 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 19:06:37,644 - src.draft - INFO - Generating draft for general ticket, attempt 3
+2025-08-06 19:06:39,309 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:06:39,310 - src.review - INFO - Reviewing draft for general ticket, attempt 3
+2025-08-06 19:06:40,229 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:06:40,230 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 19:06:40,231 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 19:06:40,232 - src.escalation_logger - INFO - Escalating ticket after max attempts reached
+2025-08-06 19:42:09,357 - __main__ - INFO - Starting workflow for ticket: website getting started but not running forward
+2025-08-06 19:42:09,479 - classifier - INFO - Classified ticket as security with confidence 0.56
+2025-08-06 19:42:09,480 - classifier - INFO - Classified ticket as security with confidence 0.56
+2025-08-06 19:42:09,481 - src.rag_retrieval - INFO - Retrieving context for category: security, attempt: 1
+2025-08-06 19:42:09,482 - src.rag_retrieval - INFO - Retrieved 2 documents for security
+2025-08-06 19:42:09,483 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:42:09,483 - src.draft - INFO - Generating draft for security ticket, attempt 1
+2025-08-06 19:42:11,030 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:42:11,032 - src.review - INFO - Reviewing draft for security ticket, attempt 1
+2025-08-06 19:42:11,894 - src.review - INFO - Review completed: APPROVED
+2025-08-06 19:42:11,895 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 19:42:37,024 - __main__ - INFO - Starting workflow for ticket: testing issue
+2025-08-06 19:42:37,026 - classifier - INFO - Classified ticket as technical with confidence 1.00
+2025-08-06 19:42:37,026 - classifier - INFO - Classified ticket as technical with confidence 1.00
+2025-08-06 19:42:37,027 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 1
+2025-08-06 19:42:37,028 - src.rag_retrieval - INFO - Retrieved 2 documents for technical
+2025-08-06 19:42:37,028 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:42:37,029 - src.draft - INFO - Generating draft for technical ticket, attempt 1
+2025-08-06 19:42:37,731 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:42:37,732 - src.review - INFO - Reviewing draft for technical ticket, attempt 1
+2025-08-06 19:42:38,598 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:42:38,599 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:42:38,599 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:42:38,603 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:42:38,604 - src.rag_retrieval - INFO - Retrieving context for category: technical, attempt: 2
+2025-08-06 19:42:38,607 - src.rag_retrieval - INFO - Retrieved 3 documents for technical
+2025-08-06 19:42:38,609 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:42:38,609 - src.draft - INFO - Generating draft for technical ticket, attempt 2
+2025-08-06 19:42:39,448 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:42:39,449 - src.review - INFO - Reviewing draft for technical ticket, attempt 2
+2025-08-06 19:42:40,206 - src.review - INFO - Review completed: APPROVED
+2025-08-06 19:42:40,207 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 19:45:02,536 - __main__ - INFO - Starting workflow for ticket: I want help
+2025-08-06 19:45:02,539 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:45:02,539 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:45:02,540 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 19:45:02,540 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 19:45:02,541 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:45:02,542 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 19:45:03,298 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:45:03,300 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 19:45:04,201 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:45:04,202 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:45:04,202 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:45:04,203 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:45:04,203 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 19:45:04,205 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 19:45:04,206 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:45:04,207 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 19:45:05,048 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:45:05,049 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 19:45:06,404 - src.review - INFO - Review completed: APPROVED
+2025-08-06 19:45:06,405 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 19:46:35,486 - __main__ - INFO - Starting workflow for ticket: guidance help
+2025-08-06 19:46:35,488 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:46:35,488 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:46:35,489 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 19:46:35,490 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 19:46:35,490 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:46:35,491 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 19:46:36,202 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:46:36,203 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 19:46:37,073 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:46:37,075 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:46:37,075 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:46:37,075 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:46:37,076 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 19:46:37,076 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 19:46:37,078 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:46:37,078 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 19:46:37,952 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:46:37,953 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 19:46:38,783 - src.review - INFO - Review completed: APPROVED
+2025-08-06 19:46:38,784 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 19:47:35,467 - __main__ - INFO - Starting workflow for ticket: guidance needed
+2025-08-06 19:47:35,469 - classifier - INFO - Classified ticket as general with confidence 0.30
+2025-08-06 19:47:35,470 - classifier - INFO - Classified ticket as general with confidence 0.30
+2025-08-06 19:47:35,471 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 19:47:35,471 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 19:47:35,472 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:47:35,473 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 19:47:36,248 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:47:36,250 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 19:47:37,065 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:47:37,066 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:47:37,067 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:47:37,069 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:47:37,070 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 19:47:37,070 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 19:47:37,071 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:47:37,072 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 19:47:38,059 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:47:38,061 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 19:47:38,871 - src.review - INFO - Review completed: APPROVED
+2025-08-06 19:47:38,872 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 19:48:17,358 - __main__ - INFO - Starting workflow for ticket: help
+2025-08-06 19:48:17,371 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:48:17,372 - classifier - INFO - Classified ticket as general with confidence 1.00
+2025-08-06 19:48:17,373 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 19:48:17,373 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 19:48:17,373 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 19:48:17,374 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 19:48:18,134 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:48:18,135 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 19:48:19,289 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:48:19,290 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 19:48:19,291 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:48:19,292 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 19:48:19,292 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 19:48:19,293 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 19:48:19,294 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 19:48:19,294 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 19:48:20,200 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:48:20,200 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 19:48:21,004 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:48:21,005 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 19:48:21,005 - src.graph - INFO - Retrying after failed review
+2025-08-06 19:48:21,006 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 19:48:21,006 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 3
+2025-08-06 19:48:21,007 - src.rag_retrieval - INFO - Retrieved 4 documents for general
+2025-08-06 19:48:21,008 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 19:48:21,008 - src.draft - INFO - Generating draft for general ticket, attempt 3
+2025-08-06 19:48:21,901 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 19:48:21,903 - src.review - INFO - Reviewing draft for general ticket, attempt 3
+2025-08-06 19:48:22,855 - src.review - INFO - Review completed: REJECTED
+2025-08-06 19:48:22,856 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 19:48:22,857 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 19:48:22,869 - src.escalation_logger - INFO - Escalating ticket after max attempts reached
+2025-08-06 20:03:44,768 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 20:03:44,770 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 20:03:44,782 - src.graph - INFO - Graph compiled successfully
+2025-08-06 20:04:44,225 - __main__ - INFO - Starting workflow for ticket: I have a billing issue
+2025-08-06 20:04:44,326 - classifier - INFO - Classified as billing with confidence 0.20
+2025-08-06 20:04:44,328 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 1
+2025-08-06 20:04:44,328 - src.rag_retrieval - INFO - Retrieved 2 documents for billing
+2025-08-06 20:04:44,329 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:04:44,329 - src.draft - INFO - Generating draft for billing ticket, attempt 1
+2025-08-06 20:04:47,768 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:04:47,769 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 20:04:48,647 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:04:48,648 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 20:07:23,225 - __main__ - INFO - Starting workflow for ticket: I have a billing issue
+2025-08-06 20:07:23,227 - classifier - INFO - Classified as billing with confidence 0.20
+2025-08-06 20:07:23,228 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 1
+2025-08-06 20:07:23,229 - src.rag_retrieval - INFO - Retrieved 2 documents for billing
+2025-08-06 20:07:23,229 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:07:23,230 - src.draft - INFO - Generating draft for billing ticket, attempt 1
+2025-08-06 20:07:24,101 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:07:24,102 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 20:07:25,134 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:07:25,135 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:07:25,136 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:07:25,137 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:07:25,138 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 2
+2025-08-06 20:07:25,139 - src.rag_retrieval - INFO - Retrieved 3 documents for billing
+2025-08-06 20:07:25,140 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:07:25,140 - src.draft - INFO - Generating draft for billing ticket, attempt 2
+2025-08-06 20:07:26,357 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:07:26,358 - src.review - INFO - Reviewing draft for billing ticket, attempt 2
+2025-08-06 20:07:27,466 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:07:27,467 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 20:08:04,703 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 20:08:04,705 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 20:08:04,715 - src.graph - INFO - Graph compiled successfully
+2025-08-06 20:08:25,159 - __main__ - INFO - Starting workflow for ticket: billing issue
+2025-08-06 20:08:25,176 - classifier - INFO - Classified as billing with confidence 0.20
+2025-08-06 20:08:25,177 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 1
+2025-08-06 20:08:25,177 - src.rag_retrieval - INFO - Retrieved 2 documents for billing
+2025-08-06 20:08:25,178 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:08:25,179 - src.draft - INFO - Generating draft for billing ticket, attempt 1
+2025-08-06 20:08:26,156 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:08:26,158 - src.review - INFO - Reviewing draft for billing ticket, attempt 1
+2025-08-06 20:08:27,085 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:08:27,086 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:08:27,087 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:08:27,088 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:08:27,088 - src.rag_retrieval - INFO - Retrieving context for category: billing, attempt: 2
+2025-08-06 20:08:27,089 - src.rag_retrieval - INFO - Retrieved 3 documents for billing
+2025-08-06 20:08:27,090 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:08:27,091 - src.draft - INFO - Generating draft for billing ticket, attempt 2
+2025-08-06 20:08:27,972 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:08:27,975 - src.review - INFO - Reviewing draft for billing ticket, attempt 2
+2025-08-06 20:08:29,242 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:08:29,243 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 20:09:52,212 - __main__ - INFO - Starting workflow for ticket: Support Hours
+2025-08-06 20:09:52,215 - classifier - INFO - Classified as general with confidence 0.30
+2025-08-06 20:09:52,216 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 20:09:52,216 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 20:09:52,216 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:09:52,217 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 20:09:52,950 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:09:52,952 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 20:09:53,979 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:09:53,980 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:09:53,980 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:09:53,981 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:09:53,982 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 20:09:53,982 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 20:09:53,983 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:09:53,983 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 20:09:54,838 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:09:54,839 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 20:09:55,806 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:09:55,807 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 20:11:56,066 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 20:11:56,067 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 20:11:56,077 - src.graph - INFO - Graph compiled successfully
+2025-08-06 20:12:15,418 - __main__ - INFO - Starting workflow for ticket: Ticket problem
+2025-08-06 20:12:15,451 - classifier - INFO - Classified as general with confidence 0.30
+2025-08-06 20:12:15,452 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 20:12:15,453 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 20:12:15,453 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:12:15,454 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 20:12:16,459 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:12:16,460 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 20:12:17,458 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:12:17,459 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:12:17,459 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:12:17,460 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:12:17,460 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 20:12:17,460 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 20:12:17,461 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:12:17,461 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 20:12:18,388 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:12:18,389 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 20:12:19,448 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:12:19,449 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 20:17:17,654 - __main__ - INFO - Starting workflow for ticket: Ticket problem
+2025-08-06 20:17:17,725 - classifier - INFO - Classified as general with confidence 0.30
+2025-08-06 20:17:17,727 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 20:17:17,728 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 20:17:17,728 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:17:17,729 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 20:17:18,681 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:17:18,682 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 20:17:20,406 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:17:20,410 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:17:20,410 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:17:20,412 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:17:20,412 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 20:17:20,416 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 20:17:20,417 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:17:20,418 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 20:17:21,424 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:17:21,425 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 20:17:23,812 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:17:23,813 - src.graph - INFO - Checking attempts: 2, review_passed: False
+2025-08-06 20:17:23,813 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:17:23,814 - src.graph - INFO - Retry RAG retrieval, attempt 3
+2025-08-06 20:17:23,815 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 3
+2025-08-06 20:17:23,815 - src.rag_retrieval - INFO - Retrieved 4 documents for general
+2025-08-06 20:17:23,816 - src.graph - INFO - Retry draft generation, attempt 3
+2025-08-06 20:17:23,816 - src.draft - INFO - Generating draft for general ticket, attempt 3
+2025-08-06 20:17:24,953 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:17:24,954 - src.review - INFO - Reviewing draft for general ticket, attempt 3
+2025-08-06 20:17:25,936 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:17:25,937 - src.graph - INFO - Checking attempts: 3, review_passed: False
+2025-08-06 20:17:25,937 - src.graph - WARNING - Maximum attempts reached, escalating
+2025-08-06 20:17:25,938 - src.escalation_logger - INFO - Escalating ticket after max attempts reached
+2025-08-06 20:18:00,738 - __main__ - INFO - Starting workflow for ticket: techinal problem
+2025-08-06 20:18:00,741 - classifier - INFO - Classified as general with confidence 0.30
+2025-08-06 20:18:00,742 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 20:18:00,742 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 20:18:00,743 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:18:00,744 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 20:18:01,636 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:18:01,637 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 20:18:02,576 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:18:02,576 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:18:02,577 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:18:02,578 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:18:02,578 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 20:18:02,579 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 20:18:02,580 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:18:02,580 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 20:18:03,498 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:18:03,500 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 20:18:04,458 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:18:04,459 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 20:23:19,662 - __main__ - INFO - Starting workflow for ticket: techinal problem
+2025-08-06 20:23:19,737 - classifier - INFO - Classified as general with confidence 0.30
+2025-08-06 20:23:19,739 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 1
+2025-08-06 20:23:19,739 - src.rag_retrieval - INFO - Retrieved 2 documents for general
+2025-08-06 20:23:19,740 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:23:19,740 - src.draft - INFO - Generating draft for general ticket, attempt 1
+2025-08-06 20:23:22,482 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:23:22,483 - src.review - INFO - Reviewing draft for general ticket, attempt 1
+2025-08-06 20:23:23,787 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:23:23,789 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:23:23,789 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:23:23,791 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:23:23,791 - src.rag_retrieval - INFO - Retrieving context for category: general, attempt: 2
+2025-08-06 20:23:23,792 - src.rag_retrieval - INFO - Retrieved 3 documents for general
+2025-08-06 20:23:23,794 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:23:23,794 - src.draft - INFO - Generating draft for general ticket, attempt 2
+2025-08-06 20:23:24,946 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:23:24,947 - src.review - INFO - Reviewing draft for general ticket, attempt 2
+2025-08-06 20:23:27,599 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:23:27,600 - src.graph - INFO - Checking attempts: 2, review_passed: True
+2025-08-06 20:24:54,568 - src.graph - INFO - Creating support ticket resolution graph
+2025-08-06 20:24:54,569 - src.graph - INFO - Graph structure defined, compiling...
+2025-08-06 20:24:54,583 - src.graph - INFO - Graph compiled successfully
+2025-08-06 20:25:18,383 - __main__ - INFO - Starting workflow for ticket: login issue
+2025-08-06 20:25:18,421 - classifier - INFO - Classified as security with confidence 0.12
+2025-08-06 20:25:18,422 - src.rag_retrieval - INFO - Retrieving context for category: security, attempt: 1
+2025-08-06 20:25:18,423 - src.rag_retrieval - INFO - Retrieved 2 documents for security
+2025-08-06 20:25:18,423 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:25:18,424 - src.draft - INFO - Generating draft for security ticket, attempt 1
+2025-08-06 20:25:20,179 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:25:20,181 - src.review - INFO - Reviewing draft for security ticket, attempt 1
+2025-08-06 20:25:21,758 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:25:21,759 - src.graph - INFO - Checking attempts: 1, review_passed: True
+2025-08-06 20:26:48,732 - __main__ - INFO - Starting workflow for ticket: Techical problem
+2025-08-06 20:26:48,734 - classifier - INFO - Classified as security with confidence 0.12
+2025-08-06 20:26:48,736 - src.rag_retrieval - INFO - Retrieving context for category: security, attempt: 1
+2025-08-06 20:26:48,737 - src.rag_retrieval - INFO - Retrieved 2 documents for security
+2025-08-06 20:26:48,737 - src.graph - INFO - RAG retrieval completed, attempt 1
+2025-08-06 20:26:48,738 - src.draft - INFO - Generating draft for security ticket, attempt 1
+2025-08-06 20:26:49,914 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:26:49,916 - src.review - INFO - Reviewing draft for security ticket, attempt 1
+2025-08-06 20:26:51,762 - src.review - INFO - Review completed: REJECTED
+2025-08-06 20:26:51,763 - src.graph - INFO - Checking attempts: 1, review_passed: False
+2025-08-06 20:26:51,763 - src.graph - INFO - Retrying after failed review
+2025-08-06 20:26:51,764 - src.graph - INFO - Retry RAG retrieval, attempt 2
+2025-08-06 20:26:51,765 - src.rag_retrieval - INFO - Retrieving context for category: security, attempt: 2
+2025-08-06 20:26:51,765 - src.rag_retrieval - INFO - Retrieved 3 documents for security
+2025-08-06 20:26:51,766 - src.graph - INFO - Retry draft generation, attempt 2
+2025-08-06 20:26:51,767 - src.draft - INFO - Generating draft for security ticket, attempt 2
+2025-08-06 20:26:53,104 - src.draft - INFO - Draft generated successfully with Groq
+2025-08-06 20:26:53,106 - src.review - INFO - Reviewing draft for security ticket, attempt 2
+2025-08-06 20:26:54,617 - src.review - INFO - Review completed: APPROVED
+2025-08-06 20:26:54,618 - src.graph - INFO - Checking attempts: 2, review_passed: True

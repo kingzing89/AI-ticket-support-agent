@@ -2,7 +2,7 @@
 from typing import List, Dict
 import logging
 
-# Mock knowledge base - you can expand this or load from files
+
 KNOWLEDGE_BASE = {
     "billing": [
         {
@@ -85,75 +85,61 @@ class RAGRetriever:
     
     def retrieve_context(self, classification: str, subject: str, description: str, 
                         reviewer_feedback: str = None, attempt: int = 1) -> List[Dict]:
-        """
-        Retrieve relevant context based on classification and query
-        
-        Args:
-            classification: The ticket category (billing, technical, security, general)
-            subject: Ticket subject line
-            description: Ticket description
-            reviewer_feedback: Feedback from previous review (for retries)
-            attempt: Current attempt number (1, 2, or 3)
-        
-        Returns:
-            List of relevant documents with title and content
-        """
+       
         self.logger.info(f"Retrieving context for category: {classification}, attempt: {attempt}")
         
-        # Normalize classification
+        
         category = classification.lower()
         if category not in self.knowledge_base:
             self.logger.warning(f"Unknown category: {category}, defaulting to general")
             category = "general"
         
-        # Create search query
+       
         query_text = f"{subject} {description}".lower()
         if reviewer_feedback:
             query_text += f" {reviewer_feedback}".lower()
         
-        # Get documents for the category
+       
         category_docs = self.knowledge_base[category]
         
-        # Score documents based on keyword overlap
+        
         scored_docs = []
         query_words = set(query_text.split())
         
         for doc in category_docs:
-            # Calculate relevance score
+            
             doc_text = f"{doc['title']} {doc['content']}".lower()
             doc_words = set(doc_text.split())
             
-            # Simple overlap scoring
+            
             overlap = len(query_words.intersection(doc_words))
             total_query_words = len(query_words)
             score = overlap / total_query_words if total_query_words > 0 else 0
             
             scored_docs.append((doc, score))
         
-        # Sort by relevance score
+        
         scored_docs.sort(key=lambda x: x[1], reverse=True)
         
-        # Determine how many docs to return based on attempt
+        
         if attempt == 1:
-            # First attempt: return top 2 most relevant
+            
             num_docs = 2
         elif attempt == 2:
-            # Second attempt: return top 3 (broader context)
+            
             num_docs = 3
         else:
-            # Final attempt: return all docs for the category
+            
             num_docs = len(scored_docs)
         
-        # Return selected documents
+       
         selected_docs = [doc for doc, score in scored_docs[:num_docs]]
         
         self.logger.info(f"Retrieved {len(selected_docs)} documents for {category}")
         return selected_docs
     
     def format_context_for_prompt(self, documents: List[Dict]) -> str:
-        """
-        Format retrieved documents for use in LLM prompts
-        """
+        
         if not documents:
             return "No relevant documentation found."
         
@@ -165,14 +151,12 @@ class RAGRetriever:
         return formatted_context
 
 
-# Test function to verify your RAG is working
+
 def test_rag_retrieval():
-    """
-    Test function to verify RAG retrieval works correctly
-    """
+
     retriever = RAGRetriever()
     
-    # Test cases
+   
     test_cases = [
         {
             "classification": "billing",

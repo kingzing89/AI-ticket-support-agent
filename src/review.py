@@ -10,19 +10,7 @@ class DraftReviewer:
     
     def review_draft(self, subject: str, description: str, classification: str, 
                     draft_response: str, attempt: int = 1) -> Tuple[bool, str]:
-        """
-        Review a draft response for quality and policy compliance
-        
-        Args:
-            subject: Original ticket subject
-            description: Original ticket description  
-            classification: Ticket category
-            draft_response: The draft response to review
-            attempt: Current attempt number
-            
-        Returns:
-            Tuple of (approved: bool, feedback: str)
-        """
+    
         self.logger.info(f"Reviewing draft for {classification} ticket, attempt {attempt}")
         
         # Get category-specific review criteria
@@ -37,7 +25,7 @@ class DraftReviewer:
                 prompt=review_prompt,
                 system_prompt=system_prompt,
                 model="llama3-8b-8192",
-                temperature=0.1,  # Very low temperature for consistent reviews
+                temperature=0.1,  
                 max_tokens=300
             )
             
@@ -54,19 +42,27 @@ class DraftReviewer:
     
     def _get_reviewer_system_prompt(self, classification: str) -> str:
         """Get category-specific reviewer system prompt"""
-        
-        base_prompt = """You are a senior customer support quality assurance reviewer. Your job is to evaluate draft responses to customer tickets and ensure they meet our high standards.
 
-EVALUATION CRITERIA:
-1. ACCURACY: Is the information provided correct based on available documentation?
-2. HELPFULNESS: Does it actually help solve the customer's problem?
-3. PROFESSIONALISM: Is the tone appropriate and professional?
-4. COMPLETENESS: Are all parts of the customer's inquiry addressed?
-5. POLICY COMPLIANCE: Does it follow company policies and guidelines?
+        base_prompt = """You are an MODERATELY STRICT customer support quality assurance reviewer with VERY HIGH STANDARDS.
+
+STRICT REJECTION CRITERIA (REJECT if ANY are missing):
+1. EMPATHY: Must genuinely acknowledge customer frustration with specific empathetic language (not just "I understand")
+2. LENGTH: Must be at least 80 words for any non-trivial issue 
+3. SPECIFICITY: Must provide at least 2-3 concrete, actionable steps
+4. PERSONALIZATION: Must address the customer's specific situation (not generic template responses)
+5. COMPLETENESS: Must address ALL parts of the customer's inquiry
+6. FOLLOW-UP: Must provide clear next steps or contact information
+
+SPECIAL TESTING RULES:
+- For very short/vague tickets (like "Test", "Help"), ALWAYS REJECT 
+- If customer request is vague, response must ask for specific details
 
 IMPORTANT: You must respond in this exact format:
 DECISION: [APPROVED/REJECTED]
-FEEDBACK: [Your detailed feedback here]"""
+FEEDBACK: [Your specific, detailed feedback about what needs to be improved]"""
+
+        
+
 
         category_specific = {
             "billing": """

@@ -12,32 +12,19 @@ class DraftGenerator:
     def generate_draft(self, subject: str, description: str, classification: str, 
                       formatted_context: str, reviewer_feedback: str = None, 
                       attempt: int = 1) -> str:
-        """
-        Generate a draft response based on the ticket and retrieved context
-        
-        Args:
-            subject: Ticket subject
-            description: Ticket description  
-            classification: Ticket category
-            formatted_context: Retrieved documentation
-            reviewer_feedback: Feedback from previous review (for retries)
-            attempt: Current attempt number
-            
-        Returns:
-            Draft response string
-        """
+       
         self.logger.info(f"Generating draft for {classification} ticket, attempt {attempt}")
         
-        # Build the system prompt based on category
+        
         system_prompt = self._get_category_system_prompt(classification)
         
-        # Build the user prompt
+        
         user_prompt = self._build_user_prompt(
             subject, description, formatted_context, reviewer_feedback, attempt
         )
         
         try:
-            # Use the Groq client for completion
+            
             draft = self.client.simple_completion(
                 prompt=user_prompt,
                 system_prompt=system_prompt,
@@ -59,18 +46,18 @@ class DraftGenerator:
         base_prompt = """You are a professional customer support agent. Your goal is to provide helpful, accurate, and empathetic responses to customer inquiries.
 
 IMPORTANT GUIDELINES:
-- Be friendly and professional
-- Provide clear, actionable steps when possible
-- Don't make promises you can't keep
-- If you need more information, ask for it
-- Keep responses concise but thorough
-- Always acknowledge the customer's concern"""
+- Write directly to the customer - start with "Thank you" or "I understand" 
+- NEVER use placeholders like [Customer], [Name], or [Your Name]
+- Be helpful and professional
+- Provide clear solutions when possible
+- Keep it concise"""
 
         category_prompts = {
             "billing": base_prompt + """
 
 BILLING-SPECIFIC RULES:
 - For refund requests, explain the process but don't guarantee approval
+- NEVER use placeholders like [Customer], [Name], or [Your Name]
 - Direct complex billing issues to the billing team
 - Always mention checking account settings for payment updates
 - Be clear about billing cycles and timing""",
@@ -79,6 +66,7 @@ BILLING-SPECIFIC RULES:
 
 TECHNICAL-SPECIFIC RULES:
 - Provide step-by-step troubleshooting when possible
+- NEVER use placeholders like [Customer], [Name], or [Your Name]
 - Suggest common solutions first (cache clearing, updates, restarts)
 - Ask for specific error messages or browser/device info if needed
 - Offer to escalate to technical team for complex issues""",
@@ -87,6 +75,7 @@ TECHNICAL-SPECIFIC RULES:
 
 SECURITY-SPECIFIC RULES:
 - Take all security concerns seriously
+- NEVER use placeholders like [Customer], [Name], or [Your Name]
 - Recommend immediate action for account safety
 - Don't ask for sensitive information in responses
 - Emphasize the importance of strong passwords and 2FA
@@ -96,6 +85,7 @@ SECURITY-SPECIFIC RULES:
 
 GENERAL SUPPORT RULES:
 - Provide helpful information about our services
+- NEVER use placeholders like [Customer], [Name], or [Your Name]
 - Direct users to appropriate resources or teams
 - Be patient with general questions
 - Offer additional help if needed"""
@@ -131,13 +121,14 @@ Please write a helpful response that:
 2. Uses the provided documentation to give accurate information
 3. Provides clear next steps or solutions
 4. Maintains a professional and empathetic tone
+5. NEVER use placeholders like [Customer], [Name], or [Your Name]
 
 RESPONSE:"""
 
         return prompt
     
     def _get_fallback_response(self, classification: str) -> str:
-        """Provide fallback response if API fails"""
+        
         fallback_responses = {
             "billing": "Thank you for contacting us about your billing inquiry. I understand your concern and want to help resolve this for you. Please allow me some time to review your account details, and I'll get back to you within 24 hours with a comprehensive response. If this is urgent, please contact our billing support team directly.",
             

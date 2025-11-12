@@ -28,7 +28,7 @@ class DraftGenerator:
             draft = self.client.simple_completion(
                 prompt=user_prompt,
                 system_prompt=system_prompt,
-                model="llama3-8b-8192",  # Fast and capable model
+                model="llama-3.1-8b-instant",  # Fast and capable model
                 temperature=0.3,
                 max_tokens=500
             )

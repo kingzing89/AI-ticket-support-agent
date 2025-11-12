@@ -24,7 +24,7 @@ class DraftReviewer:
             review_result = self.client.simple_completion(
                 prompt=review_prompt,
                 system_prompt=system_prompt,
-                model="llama3-8b-8192",
+                model="llama-3.1-8b-instant",
                 temperature=0.1,  
                 max_tokens=300
             )

@@ -19,7 +19,7 @@ class GroqClient:
         if not self.api_key:
             raise ValueError("GROQ_API_KEY is required. Set it as environment variable or pass it directly.")
     
-    def chat_completion(self, messages: List[Dict], model: str = "llama3-8b-8192", 
+    def chat_completion(self, messages: List[Dict], model: str = "llama-3.1-8b-instant", 
                        temperature: float = 0.7, max_tokens: int = 1024,
                        stream: bool = False) -> Dict:
         """

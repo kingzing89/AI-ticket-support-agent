@@ -33,7 +33,7 @@ const SupportTicketAgent = () => {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/process-ticket', {
+      const response = await fetch('https://head-alicea-malikfaraz-11fe7bed.koyeb.app/api/process-ticket', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subject, description })
